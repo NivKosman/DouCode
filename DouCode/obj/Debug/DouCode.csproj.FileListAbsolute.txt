@@ -1,0 +1,9 @@
+C:\Dou-Code\DouCode\DouCode\bin\Debug\DouCode.exe.config
+C:\Dou-Code\DouCode\DouCode\obj\Debug\DouCode.csprojResolveAssemblyReference.cache
+C:\Dou-Code\DouCode\DouCode\obj\Debug\DouCode.MainMenu.resources
+C:\Dou-Code\DouCode\DouCode\obj\Debug\DouCode.Properties.Resources.resources
+C:\Dou-Code\DouCode\DouCode\obj\Debug\DouCode.csproj.GenerateResource.Cache
+C:\Dou-Code\DouCode\DouCode\bin\Debug\DouCode.exe
+C:\Dou-Code\DouCode\DouCode\bin\Debug\DouCode.pdb
+C:\Dou-Code\DouCode\DouCode\obj\Debug\DouCode.exe
+C:\Dou-Code\DouCode\DouCode\obj\Debug\DouCode.pdb

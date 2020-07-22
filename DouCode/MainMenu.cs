@@ -29,7 +29,5 @@ namespace DouCode
                GameForm.ShowDialog();
                this.Close();
           }
-
-
      }
 }

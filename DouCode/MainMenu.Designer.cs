@@ -39,11 +39,12 @@
                this.NametextBox.Location = new System.Drawing.Point(53, 75);
                this.NametextBox.Name = "NametextBox";
                this.NametextBox.Size = new System.Drawing.Size(113, 20);
-               this.NametextBox.TabIndex = 0;              
+               this.NametextBox.TabIndex = 0;
                // 
                // Namelabel
                // 
-               this.Namelabel.AutoSize = true;
+               this.Namelabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+               this.Namelabel.ForeColor = System.Drawing.SystemColors.ControlText;
                this.Namelabel.Location = new System.Drawing.Point(12, 78);
                this.Namelabel.Name = "Namelabel";
                this.Namelabel.Size = new System.Drawing.Size(35, 13);
@@ -95,9 +96,9 @@
           #endregion
 
           private System.Windows.Forms.TextBox NametextBox;
-          private System.Windows.Forms.Label Namelabel;
           private System.Windows.Forms.Label TitleLabel;
           private System.Windows.Forms.Button StartButton;
+          private System.Windows.Forms.Label Namelabel;
      }
 }
 

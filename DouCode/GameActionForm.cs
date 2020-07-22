@@ -18,7 +18,7 @@ namespace DouCode
           {
                InitializeComponent();
                CreatePlayer(i_Name);
-               this.NamePlayerLabel.Text = "Hello " + User.Name + " Welcome to our game";
+               this.NamePlayerLabel.Text = "Hello " + User.Name + " Welcome to our game"; 
           }
 
           private void CreatePlayer(string i_Name)

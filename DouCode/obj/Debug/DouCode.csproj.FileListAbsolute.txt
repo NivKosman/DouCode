@@ -7,3 +7,4 @@ C:\Dou-Code\DouCode\DouCode\bin\Debug\DouCode.exe
 C:\Dou-Code\DouCode\DouCode\bin\Debug\DouCode.pdb
 C:\Dou-Code\DouCode\DouCode\obj\Debug\DouCode.exe
 C:\Dou-Code\DouCode\DouCode\obj\Debug\DouCode.pdb
+C:\Dou-Code\DouCode\DouCode\obj\Debug\DouCode.GameActionForm.resources

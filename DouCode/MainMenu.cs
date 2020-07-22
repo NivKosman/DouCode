@@ -12,7 +12,6 @@ namespace DouCode
 {
      public partial class MainMenu : Form
      {
-          private Player User;
           public MainMenu()
           {
                InitializeComponent();
@@ -20,8 +19,17 @@ namespace DouCode
 
           private void StartButton_Click(object sender, EventArgs e)
           {
-               User = new Player(NametextBox.Text);              
+               InitGameActionForm();
           }
+
+          private void InitGameActionForm()
+          {
+               this.Hide();
+               GameActionForm GameForm = new GameActionForm(this.NametextBox.Text);
+               GameForm.ShowDialog();
+               this.Close();
+          }
+
 
      }
 }

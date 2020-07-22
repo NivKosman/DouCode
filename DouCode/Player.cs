@@ -8,7 +8,7 @@ namespace DouCode
 {
     internal class Player
      {
-          private string Name { get; }
+          public string Name { get; private set; }
           private int Score { get; set; }
 
           public Player(string i_Name)
@@ -16,7 +16,7 @@ namespace DouCode
                this.Name = i_Name;
                this.Score = 0;
           }
-
+          
           public void RightAnswer() { Score++; }          
 
           public void BadAnswer()

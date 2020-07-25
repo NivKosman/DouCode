@@ -1,0 +1,11 @@
+﻿Things we have to do are marked with "//TODO:" in their appropriate places.
+This is a list of those things with additional features to implement that still do not have an assigned class.
+
+Specifics:
+	In class "UnexpectedGameEngineInitiallizationException" validate proper implementation of exception.
+	In class "GameEngine" implement method "LoadQuestions()" using questionDB.json.
+	In questionDB.json add more questions.
+
+
+General:
+	Implement uniform Form design (can use decorator design pattern to apply it to all relevant forms).

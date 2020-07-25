@@ -1,0 +1,28 @@
+{
+	"Questions": [
+		{
+			"title": "printing in python",
+			"question": "in c++ you would use \"cout <<\". in python you would use?",
+			"right answer": "print",
+			"wrong answers": [
+				"out",
+				"printf",
+				"writeline"
+			],
+			"explanation": ""
+		},
+		{
+			"title": "user input in python",
+			"question": "in c++ you would use \"cin >>\". in python you would use?",
+			"right answer": "input",
+			"wrong answers": [
+				"read",
+				"scanf",
+				"readline"
+
+			],
+			"explanation": "We use \"input()\" to get user input in python.\nYou can insert a string as arguement which will be shown as a prompt: \"input(\"Enter input:\")\"."
+		}
+		//TODO: Formulate more questions.
+	]
+}

@@ -6,9 +6,9 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("DouCode")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("An app to use existing knowledge to learn new programing languages")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("NE Enterprises LLC")]
 [assembly: AssemblyProduct("DouCode")]
 [assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("")]

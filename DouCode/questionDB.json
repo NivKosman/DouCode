@@ -1,66 +1,61 @@
-{
-	"Questions": [
-          {
-               "title": "printing in python",
-               "question": "in c++ you would use \"cout <<\". in python you would use?",
-               "right answer": "print",
-               "wrong answers": [
-                    "out",
-                    "printf",
-                    "writeline"
-               ],
-               "explanation": ""
-          },
+[
+  {
+    "Title": "printing in python",
+    "QuestionStr": "in c++ you would use \"cout <<\". in python you would use?",
+    "RightAnswer": "print",
+    "WrongAnswers": [
+      "out",
+      "printf",
+      "writeline"
+    ],
+    "Explanation": ""
+  },
 
-          {
-               "title": "user input in python",
-               "question": "in c++ you would use \"cin >>\". in python you would use?",
-               "right answer": "input",
-               "wrong answers": [
-                    "read",
-                    "scanf",
-                    "readline"
+  {
+    "Title": "user input in python",
+    "QuestionStr": "in c++ you would use \"cin >>\". in python you would use?",
+    "RightAnswer": "input",
+    "WrongAnswers": [
+      "read",
+      "scanf",
+      "readline"
+    ],
+    "Explanation": "We use \"input()\" to get user input in python.\nYou can insert a string as arguement which will be shown as a prompt: \"input(\"Enter input:\")\"."
+  },
 
-               ],
-               "explanation": "We use \"input()\" to get user input in python.\nYou can insert a string as arguement which will be shown as a prompt: \"input(\"Enter input:\")\"."
-          },
+  {
+    "Title": "For Loop  in python",
+    "QuestionStr": "in c++ you would use \"for(i = 0; i <= n; i++)\". in python you would use?",
+    "RightAnswer": "for i in range(n)",
+    "WrongAnswers": [
+      "for(i = 0; i <= n; i++)",
+      "for (i FROM 0 TO n)",
+      "foreach (val i in Array)"
+    ],
+    "Explanation": ""
+  },
 
-          {
-               "title": "For Loop  in python",
-               "question": "in c++ you would use \"for(i = 0; i <= n; i++)\". in python you would use?",
-               "right answer": "for i in range(n)",
-               "wrong answers": [
-                    "for(i = 0; i <= n; i++)",
-                    "for (i FROM 0 TO n)",
-                    "foreach (val i in Array)"
-               ],
-               "explanation": ""
-          },
+  {
+    "Title": "While Loop  in python",
+    "QuestionStr": "in c++ you would use \"while(condition){expression}\". in python you would use?",
+    "RightAnswer": "while condition:\n expression",
+    "WrongAnswers": [
+      "while (condition)\n expression",
+      "while (condition):\n expression",
+      "while condition:\n {expression}"
+    ],
+    "Explanation": ""
+  },
 
-          {
-               "title": "While Loop  in python",
-               "question": "in c++ you would use \"while(condition){expression}\". in python you would use?",
-               "right answer": "while condition:\n expression",
-               "wrong answers": [
-                    "while (condition)\n expression",
-                    "while (condition):\n expression",
-                    "while condition:\n {expression}"
-               ],
-               "explanation": ""
-          },
-
-          {
-               "title": "Functions  in python",
-               "question": "in c++ you would use \"return_type function_name( parameter list ){body of the function}\". in python you would use?",
-               "right answer": "def function_name ( parameter list ):\nbody of the function",
-               "wrong answers": [
-                    "def function_name ( parameter list ):\n{body of the function}",
-                    "def function_name ( parameter list )\n{body of the function}",
-                    "function_name ( parameter list )\n{body of the function}"
-               ],
-               "explanation": "in phyton we use the def keyword and it doesnt have return_type"
-          }
-
-		//TODO: Formulate more questions.
-	]
-}
+  {
+    "Title": "Functions  in python",
+    "QuestionStr": "in c++ you would use \"return_type function_name( parameter list ){body of the function}\". in python you would use?",
+    "RightAnswer": "def function_name ( parameter list ):\nbody of the function",
+    "WrongAnswers": [
+      "def function_name ( parameter list ):\n{body of the function}",
+      "def function_name ( parameter list )\n{body of the function}",
+      "function_name ( parameter list )\n{body of the function}"
+    ],
+    "Explanation": "in phyton we use the def keyword and it doesnt have return_type"
+  }
+]

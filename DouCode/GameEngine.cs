@@ -4,6 +4,8 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.Json;
+
 
 namespace DouCode
 {
@@ -52,14 +54,17 @@ namespace DouCode
                 return s_Instance;
         }
 
+        public Question GetQuestion()
+        {
+            //TODO: return random question
+            return new Question();
+
+        }
+
         private HashSet<Question> LoadQuestions()
         {
-            HashSet<Question> questions = new HashSet<Question>();
-            
-            using (File.Open("\\questionDB.json",FileMode.Open))
-            {
-                //TODO: Implement desiriallization of json from file into HashSet.
-            }
+            String questionString = File.ReadAllText("\\questionDB.json");
+            HashSet<Question> questions = JsonSerializer.Deserialize<HashSet<Question>>(questionString);
             return questions; 
         }
     }

@@ -12,26 +12,152 @@ namespace DouCode
 {
      public partial class GameActionForm : Form
      {
-          private Player User;
+          // private Player User;
+          // private GameEngine gameEngine;
+          private int rightAnswer;
+          private string[] answers;
+          private Question question;
 
-          public GameActionForm(string i_Name)
+          public GameActionForm()
           {
                InitializeComponent();
-               CreatePlayer(i_Name);
-               this.NamePlayerLabel.Text = "Hello " + User.Name + " Welcome to our game"; 
+               this.NamePlayerLabel.Text = "Hello " +GameEngine.Instance().m_Player.Name + " Welcome to our game";
+               newQuestion();
           }
 
-          private void CreatePlayer(string i_Name)
-          {
-               User = new Player(i_Name);
-          }
+         // private void CreatePlayer(string i_Name)
+         // {
+         //      User = new Player(i_Name);
+         // }
 
           private void BackButton_Click(object sender, EventArgs e)
           {
                this.Hide();
+
                MainMenu mainMenu = new MainMenu();
                mainMenu.ShowDialog();
                this.Close();
+          }
+
+          private void newQuestion()
+          {
+               this.textBoxExplanation.Text = "";
+               this.buttonGetExplanation.Enabled = true;
+               this.buttonAnswer0.Enabled = true;
+               this.buttonAnswer1.Enabled = true;
+               this.buttonAnswer2.Enabled = true;
+               this.buttonAnswer3.Enabled = true;
+               this.textBoxResult.Hide();
+
+
+               this.question = GameEngine.Instance().GetQuestion();
+               int j = 0;
+               this.rightAnswer = new Random().Next(0, 3);
+              
+               this.answers = new string[4];
+
+               for(int i=0;i<=3;i++)
+               {
+                    if(i==rightAnswer)
+                    {
+                        this.answers[i] = question.RightAnswer;
+                    }
+                    else
+                    {
+                         this.answers[i] = question.WrongAnswers[j];
+                         j++;
+                    }
+               }
+
+               this.buttonAnswer0.Text = this.answers[0];
+               this.buttonAnswer1.Text = this.answers[1];
+               this.buttonAnswer2.Text = this.answers[2];
+               this.buttonAnswer3.Text = this.answers[3];
+               this.textBoxQuestion.Text = this.question.QuestionString;
+               this.textBoxTitle.Text = this.question.Title;
+          }
+
+          private void buttonNewQuestion_Click(object sender, EventArgs e)
+          {
+               newQuestion();
+          }
+
+          private void buttonAnswer0_Click(object sender, EventArgs e)
+          {
+               this.buttonAnswer0.Enabled = false;
+
+               if(rightAnswer==0)
+               {
+                    this.textBoxResult.Text = "Right\nAnswer";
+                    this.textBoxResult.ForeColor = Color.Green;
+               }
+               else
+               {
+                    this.textBoxResult.Text = "Wrong\nAnswer";
+                    this.textBoxResult.ForeColor = Color.Red;
+               }
+
+               this.textBoxResult.Show();
+          }
+
+          private void buttonAnswer1_Click(object sender, EventArgs e)
+          {
+               this.buttonAnswer1.Enabled = false;
+
+               if (rightAnswer == 1)
+               {
+                    this.textBoxResult.Text = "Right\nAnswer";
+                    this.textBoxResult.ForeColor = Color.Green;
+               }
+               else
+               {
+                    this.textBoxResult.Text = "Wrong\nAnswer";
+                    this.textBoxResult.ForeColor = Color.Red;
+               }
+
+               this.textBoxResult.Show();
+          }
+
+          private void buttonAnswer2_Click(object sender, EventArgs e)
+          {
+               this.buttonAnswer2.Enabled = false;
+
+               if (rightAnswer == 2)
+               {
+                    this.textBoxResult.Text = "Right\nAnswer";
+                    this.textBoxResult.ForeColor = Color.Green;
+               }
+               else
+               {
+                    this.textBoxResult.Text = "Wrong\nAnswer";
+                    this.textBoxResult.ForeColor = Color.Red;
+               }
+
+               this.textBoxResult.Show();
+          }
+
+          private void buttonAnswer3_Click(object sender, EventArgs e)
+          {
+               this.buttonAnswer3.Enabled = false;
+
+               if (rightAnswer == 3)
+               {
+                    this.textBoxResult.Text = "Right\nAnswer";
+                    this.textBoxResult.ForeColor = Color.Green;
+               }
+               else
+               {
+                    this.textBoxResult.Text = "Wrong\nAnswer";
+                    this.textBoxResult.ForeColor = Color.Red;
+               }
+
+               this.textBoxResult.Show();
+          }
+
+          private void buttonGetExplanation_Click(object sender, EventArgs e)
+          {
+               this.buttonGetExplanation.Enabled = false;
+               this.textBoxExplanation.Text = question.Explanation;
           }
      }
 }

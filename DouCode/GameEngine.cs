@@ -21,11 +21,11 @@ namespace DouCode
         private GameEngine(string i_UserName)
         {
             m_Player = new Player(i_UserName);
-            r_Questions = LoadQuestions();
+           // r_Questions = LoadQuestions();
         }
 
 
-        public GameEngine Instance(string i_UserName)
+        public static GameEngine Instance(string i_UserName)
         {
             if (s_Instance == null)
             {
@@ -46,7 +46,7 @@ namespace DouCode
 
         }
 
-        public GameEngine Instance()
+        public static GameEngine Instance()
         {
             if (s_Instance == null)
                 throw new UnexpectedGameEngineInitiallizationException();

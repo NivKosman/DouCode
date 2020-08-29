@@ -25,7 +25,8 @@ namespace DouCode
           private void InitGameActionForm()
           {
                this.Hide();
-               GameActionForm GameForm = new GameActionForm(this.NametextBox.Text);
+               GameEngine.Instance(this.NametextBox.Text);
+               GameActionForm GameForm = new GameActionForm();
                GameForm.ShowDialog();
                this.Close();
           }

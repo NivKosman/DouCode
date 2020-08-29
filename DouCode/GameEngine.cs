@@ -4,7 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Text.Json;
+using System.Reflection;
 
 
 namespace DouCode
@@ -25,7 +25,7 @@ namespace DouCode
         }
 
 
-        public GameEngine Instance(string i_UserName)
+        public static GameEngine Instance(string i_UserName)
         {
             if (s_Instance == null)
             {
@@ -56,15 +56,37 @@ namespace DouCode
 
         public Question GetQuestion()
         {
-            //TODO: return random question
-            return new Question();
+            Question question = null;
+            return question;
 
+        }
+
+        public HashSet<Question> GetAllQuestions()
+        {
+            return r_Questions;
         }
 
         private HashSet<Question> LoadQuestions()
         {
-            String questionString = File.ReadAllText("\\questionDB.json");
-            HashSet<Question> questions = JsonSerializer.Deserialize<HashSet<Question>>(questionString);
+            HashSet<Question> questions = new HashSet<Question>();
+
+            String questionsString = File.ReadAllText(@"D:\Studies\Workshop\DouCode\questionDB.db");
+            String[] questionDelim = { "\n$$$" };
+            String[] allQuestions = questionsString.Split(questionDelim, StringSplitOptions.RemoveEmptyEntries);
+
+            foreach (String str in allQuestions)
+            {
+                List<String> questionList = new List<string>();
+                string[] delims = { "$-$" };
+                String[] singleQuestionParts = str.Split(delims, StringSplitOptions.RemoveEmptyEntries);
+                
+                foreach (String questionPart in singleQuestionParts)
+                {
+                    questionList.Add(questionPart);
+                }
+                String[] questionArr = questionList.ToArray();
+                questions.Add(new Question(questionArr));
+            }
             return questions; 
         }
     }

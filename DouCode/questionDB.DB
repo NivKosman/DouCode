@@ -1,39 +1,14 @@
-﻿Title$:$printing in python
-Question$:$in c++ you would use \"cout <<\". in python you would use?
-RightAnswer$:$print
-WrongAnswers$:$out
-WrongAnswers$:$printf
-WrongAnswers$:$writeline
-Explanation$:$???????????????
-$$--$$
-Title$:$user input in python
-QuestionStr$:$in c++ you would use \"cin >>\". in python you would use?
-RightAnswer$:$input
-WrongAnswers$:$read
-WrongAnswers$:$scanf
-WrongAnswers$:$readline
-Explanation$:$We use \"input()\" to get user input in python.\nYou can insert a string as arguement which will be shown as a prompt: \"input(\"Enter input:\")\".
-$$--$$
-Title$:$For Loop  in python
-QuestionStr$:$in c++ you would use \"for(i = 0; i <= n; i++)\". in python you would use?
-RightAnswer$:$for i in range(n)
-WrongAnswers$:$for(i = 0; i <= n; i++)
-WrongAnswers$:$for (i FROM 0 TO n)
-WrongAnswers$:$foreach (val i in Array)
-Explanation$:$?????????????????
-$$--$$
-Title$:$While Loop  in python
-QuestionStr$:$in c++ you would use \"while(condition){expression}\". in python you would use?
-RightAnswer$:$while condition:\n expression
-WrongAnswers$:$while (condition)\n expression
-WrongAnswers$:$while (condition):\n expression
-WrongAnswers$:$while condition:\n {expression}
-Explanation$:$?????????????????
-$$--$$
-Title$:$Functions  in python
-QuestionStr$:$in c++ you would use \"return_type function_name( parameter list ){body of the function}\". in python you would use?
-RightAnswer$:$def function_name ( parameter list ):\nbody of the function
-WrongAnswers$:$def function_name ( parameter list ):\n{body of the function}
-WrongAnswers$:$def function_name ( parameter list )\n{body of the function}
-WrongAnswers$:$function_name ( parameter list )\n{body of the function}
-Explanation$:$in phyton we use the def keyword and it doesnt have return_type
+﻿Printing in python$-$In c++ you would use \"cout <<\". in python you would use?$-$print$-$out$-$printf$-$writeline$-$???????????????
+$$$User input in python$-$In c++ you would use \"cin >>\". in python you would use?$-$input$-$read$-$scanf$-$readline$-$We use \"input()\" to get user input in python.
+You can insert a string as arguement which will be shown as a prompt: \"input(\"Enter input:\")\".
+$$$For Loop  in python$-$In c++ you would use \"for(i = 0; i <= n; i++)\". in python you would use?$-$for i in range(n)$-$for(i = 0; i <= n; i++)$-$for (i FROM 0 TO n)$-$foreach (val i in Array)$-$?????????????????
+$$$While Loop  in python$-$In c++ you would use \"while(condition){expression}\". in python you would use?$-$while condition:
+expression$-$while (condition)
+expression$-$while (condition):
+expression$-$while condition:
+{expression}$-$?????????????????
+Functions  in python$-$In c++ you would use \"return_type function_name( parameter list ){body of the function}\". in python you would use?$-$def function_name ( parameter list ):
+body of the function$-$def function_name ( parameter list ):
+{body of the function}$-$def function_name ( parameter list )
+{body of the function}$-$function_name ( parameter list )
+{body of the function}$-$In phyton we use the def keyword and it doesnt have return_type

@@ -19,19 +19,18 @@ namespace DouCode
             List<String> wrong = new List<String>();
             Title = questionsStrings[0];
             QuestionString = questionsStrings[1];
-            Explanation = questionsStrings[2];
-            RightAnswer = questionsStrings[3];
-            for (int i = 4; i < questionsStrings.Length; i++)
+            RightAnswer = questionsStrings[2];
+            for (int i = 3; i < questionsStrings.Length - 1; i++)
             {
                 wrong.Add(questionsStrings[i]);
-                System.Console.WriteLine(wrong.Count);
             }
             WrongAnswers = wrong.ToArray();
+            Explanation = questionsStrings[questionsStrings.Length - 1].Trim();
         }
 
-        public Question()
+        public override String ToString()
         {
-
+            return $"Title: {this.Title}\nQuestion: {this.QuestionString}\nRight Answer: {this.RightAnswer}\nWrong Answers: [{this.WrongAnswers[0]}, {this.WrongAnswers[1]}, {this.WrongAnswers[2]}]\nExplanation: {this.Explanation}.";
         }
 
     }

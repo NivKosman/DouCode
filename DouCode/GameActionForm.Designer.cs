@@ -31,16 +31,16 @@
                this.NamePlayerLabel = new System.Windows.Forms.Label();
                this.BackButton = new System.Windows.Forms.Button();
                this.panelGame = new System.Windows.Forms.Panel();
-               this.textBoxTitle = new System.Windows.Forms.TextBox();
-               this.textBoxExplanation = new System.Windows.Forms.TextBox();
                this.buttonAnswer3 = new System.Windows.Forms.Button();
                this.buttonAnswer2 = new System.Windows.Forms.Button();
                this.buttonAnswer1 = new System.Windows.Forms.Button();
                this.buttonAnswer0 = new System.Windows.Forms.Button();
-               this.textBoxQuestion = new System.Windows.Forms.TextBox();
                this.buttonNewQuestion = new System.Windows.Forms.Button();
-               this.textBoxResult = new System.Windows.Forms.TextBox();
                this.buttonGetExplanation = new System.Windows.Forms.Button();
+               this.labelTitleQuestion = new System.Windows.Forms.Label();
+               this.labelQuestion = new System.Windows.Forms.Label();
+               this.labelExplanation = new System.Windows.Forms.Label();
+               this.labelResult = new System.Windows.Forms.Label();
                this.panelGame.SuspendLayout();
                this.SuspendLayout();
                // 
@@ -67,32 +67,17 @@
                // 
                // panelGame
                // 
-               this.panelGame.Controls.Add(this.textBoxTitle);
-               this.panelGame.Controls.Add(this.textBoxExplanation);
+               this.panelGame.Controls.Add(this.labelExplanation);
+               this.panelGame.Controls.Add(this.labelQuestion);
+               this.panelGame.Controls.Add(this.labelTitleQuestion);
                this.panelGame.Controls.Add(this.buttonAnswer3);
                this.panelGame.Controls.Add(this.buttonAnswer2);
                this.panelGame.Controls.Add(this.buttonAnswer1);
                this.panelGame.Controls.Add(this.buttonAnswer0);
-               this.panelGame.Controls.Add(this.textBoxQuestion);
                this.panelGame.Location = new System.Drawing.Point(24, 58);
                this.panelGame.Name = "panelGame";
                this.panelGame.Size = new System.Drawing.Size(490, 251);
                this.panelGame.TabIndex = 2;
-               // 
-               // textBoxTitle
-               // 
-               this.textBoxTitle.Location = new System.Drawing.Point(3, 4);
-               this.textBoxTitle.Name = "textBoxTitle";
-               this.textBoxTitle.Size = new System.Drawing.Size(477, 20);
-               this.textBoxTitle.TabIndex = 6;
-               // 
-               // textBoxExplanation
-               // 
-               this.textBoxExplanation.Location = new System.Drawing.Point(3, 190);
-               this.textBoxExplanation.Multiline = true;
-               this.textBoxExplanation.Name = "textBoxExplanation";
-               this.textBoxExplanation.Size = new System.Drawing.Size(480, 48);
-               this.textBoxExplanation.TabIndex = 5;
                // 
                // buttonAnswer3
                // 
@@ -134,13 +119,6 @@
                this.buttonAnswer0.UseVisualStyleBackColor = true;
                this.buttonAnswer0.Click += new System.EventHandler(this.buttonAnswer0_Click);
                // 
-               // textBoxQuestion
-               // 
-               this.textBoxQuestion.Location = new System.Drawing.Point(3, 38);
-               this.textBoxQuestion.Name = "textBoxQuestion";
-               this.textBoxQuestion.Size = new System.Drawing.Size(480, 20);
-               this.textBoxQuestion.TabIndex = 0;
-               // 
                // buttonNewQuestion
                // 
                this.buttonNewQuestion.ForeColor = System.Drawing.SystemColors.HotTrack;
@@ -151,14 +129,6 @@
                this.buttonNewQuestion.Text = "New question";
                this.buttonNewQuestion.UseVisualStyleBackColor = true;
                this.buttonNewQuestion.Click += new System.EventHandler(this.buttonNewQuestion_Click);
-               // 
-               // textBoxResult
-               // 
-               this.textBoxResult.Location = new System.Drawing.Point(529, 122);
-               this.textBoxResult.Multiline = true;
-               this.textBoxResult.Name = "textBoxResult";
-               this.textBoxResult.Size = new System.Drawing.Size(119, 84);
-               this.textBoxResult.TabIndex = 4;
                // 
                // buttonGetExplanation
                // 
@@ -172,13 +142,49 @@
                this.buttonGetExplanation.UseVisualStyleBackColor = true;
                this.buttonGetExplanation.Click += new System.EventHandler(this.buttonGetExplanation_Click);
                // 
+               // labelTitleQuestion
+               // 
+               this.labelTitleQuestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+               this.labelTitleQuestion.Location = new System.Drawing.Point(3, 4);
+               this.labelTitleQuestion.Name = "labelTitleQuestion";
+               this.labelTitleQuestion.Size = new System.Drawing.Size(480, 25);
+               this.labelTitleQuestion.TabIndex = 5;
+               this.labelTitleQuestion.Text = "labelTitle";
+               // 
+               // labelQuestion
+               // 
+               this.labelQuestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+               this.labelQuestion.Location = new System.Drawing.Point(6, 29);
+               this.labelQuestion.Name = "labelQuestion";
+               this.labelQuestion.Size = new System.Drawing.Size(477, 32);
+               this.labelQuestion.TabIndex = 6;
+               this.labelQuestion.Text = "labelQuestion";
+               // 
+               // labelExplanation
+               // 
+               this.labelExplanation.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+               this.labelExplanation.Location = new System.Drawing.Point(9, 190);
+               this.labelExplanation.Name = "labelExplanation";
+               this.labelExplanation.Size = new System.Drawing.Size(474, 50);
+               this.labelExplanation.TabIndex = 7;
+               this.labelExplanation.Text = "labelExplanation";
+               // 
+               // labelResult
+               // 
+               this.labelResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+               this.labelResult.Location = new System.Drawing.Point(535, 156);
+               this.labelResult.Name = "labelResult";
+               this.labelResult.Size = new System.Drawing.Size(100, 76);
+               this.labelResult.TabIndex = 6;
+               this.labelResult.Text = "labelResult";
+               // 
                // GameActionForm
                // 
                this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
                this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
                this.ClientSize = new System.Drawing.Size(675, 371);
+               this.Controls.Add(this.labelResult);
                this.Controls.Add(this.buttonGetExplanation);
-               this.Controls.Add(this.textBoxResult);
                this.Controls.Add(this.buttonNewQuestion);
                this.Controls.Add(this.panelGame);
                this.Controls.Add(this.BackButton);
@@ -187,9 +193,7 @@
                this.Name = "GameActionForm";
                this.Text = "GameActionForm";
                this.panelGame.ResumeLayout(false);
-               this.panelGame.PerformLayout();
                this.ResumeLayout(false);
-               this.PerformLayout();
 
           }
 
@@ -198,15 +202,15 @@
           private System.Windows.Forms.Label NamePlayerLabel;
           private System.Windows.Forms.Button BackButton;
           private System.Windows.Forms.Panel panelGame;
-          private System.Windows.Forms.TextBox textBoxQuestion;
           private System.Windows.Forms.Button buttonNewQuestion;
-          private System.Windows.Forms.TextBox textBoxExplanation;
           private System.Windows.Forms.Button buttonAnswer3;
           private System.Windows.Forms.Button buttonAnswer2;
           private System.Windows.Forms.Button buttonAnswer1;
           private System.Windows.Forms.Button buttonAnswer0;
-          private System.Windows.Forms.TextBox textBoxTitle;
-          private System.Windows.Forms.TextBox textBoxResult;
           private System.Windows.Forms.Button buttonGetExplanation;
+          private System.Windows.Forms.Label labelExplanation;
+          private System.Windows.Forms.Label labelQuestion;
+          private System.Windows.Forms.Label labelTitleQuestion;
+          private System.Windows.Forms.Label labelResult;
      }
 }

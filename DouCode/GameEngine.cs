@@ -56,7 +56,12 @@ namespace DouCode
 
         public Question GetQuestion()
         {
-            Question question = null;
+               String[] questArray = { "Printing in python"
+                    , "In c++you would use \"cout <<\". in python you would use?"
+                    , "print","cout", "printf", "writeline"
+                    ,"in phyton you use the function print in order to printing to the screen" };
+               Question question = new Question(questArray);
+                    
             return question;
 
         }

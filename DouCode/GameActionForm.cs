@@ -41,14 +41,13 @@ namespace DouCode
 
           private void newQuestion()
           {
-               this.textBoxExplanation.Text = "";
+               this.labelExplanation.Text = "";
                this.buttonGetExplanation.Enabled = true;
                this.buttonAnswer0.Enabled = true;
                this.buttonAnswer1.Enabled = true;
                this.buttonAnswer2.Enabled = true;
                this.buttonAnswer3.Enabled = true;
-               this.textBoxResult.Hide();
-
+               this.labelResult.Hide();
 
                this.question = GameEngine.Instance().GetQuestion();
                int j = 0;
@@ -73,8 +72,8 @@ namespace DouCode
                this.buttonAnswer1.Text = this.answers[1];
                this.buttonAnswer2.Text = this.answers[2];
                this.buttonAnswer3.Text = this.answers[3];
-               this.textBoxQuestion.Text = this.question.QuestionString;
-               this.textBoxTitle.Text = this.question.Title;
+               this.labelQuestion.Text = this.question.QuestionString;
+               this.labelTitleQuestion.Text = this.question.Title;
           }
 
           private void buttonNewQuestion_Click(object sender, EventArgs e)
@@ -88,16 +87,16 @@ namespace DouCode
 
                if(rightAnswer==0)
                {
-                    this.textBoxResult.Text = "Right\nAnswer";
-                    this.textBoxResult.ForeColor = Color.Green;
+                    this.labelResult.Text = "Right\nAnswer";
+                    this.labelResult.ForeColor = Color.Green;
                }
                else
                {
-                    this.textBoxResult.Text = "Wrong\nAnswer";
-                    this.textBoxResult.ForeColor = Color.Red;
+                    this.labelResult.Text = "Wrong\nAnswer";
+                    this.labelResult.ForeColor = Color.Red;
                }
 
-               this.textBoxResult.Show();
+               this.labelResult.Show();
           }
 
           private void buttonAnswer1_Click(object sender, EventArgs e)
@@ -106,16 +105,16 @@ namespace DouCode
 
                if (rightAnswer == 1)
                {
-                    this.textBoxResult.Text = "Right\nAnswer";
-                    this.textBoxResult.ForeColor = Color.Green;
+                    this.labelResult.Text = "Right\nAnswer";
+                    this.labelResult.ForeColor = Color.Green;
                }
                else
                {
-                    this.textBoxResult.Text = "Wrong\nAnswer";
-                    this.textBoxResult.ForeColor = Color.Red;
+                    this.labelResult.Text = "Wrong\nAnswer";
+                    this.labelResult.ForeColor = Color.Red;
                }
 
-               this.textBoxResult.Show();
+               this.labelResult.Show();
           }
 
           private void buttonAnswer2_Click(object sender, EventArgs e)
@@ -124,16 +123,16 @@ namespace DouCode
 
                if (rightAnswer == 2)
                {
-                    this.textBoxResult.Text = "Right\nAnswer";
-                    this.textBoxResult.ForeColor = Color.Green;
+                    this.labelResult.Text = "Right\nAnswer";
+                    this.labelResult.ForeColor = Color.Green;
                }
                else
                {
-                    this.textBoxResult.Text = "Wrong\nAnswer";
-                    this.textBoxResult.ForeColor = Color.Red;
+                    this.labelResult.Text = "Wrong\nAnswer";
+                    this.labelResult.ForeColor = Color.Red;
                }
 
-               this.textBoxResult.Show();
+               this.labelResult.Show();
           }
 
           private void buttonAnswer3_Click(object sender, EventArgs e)
@@ -142,22 +141,22 @@ namespace DouCode
 
                if (rightAnswer == 3)
                {
-                    this.textBoxResult.Text = "Right\nAnswer";
-                    this.textBoxResult.ForeColor = Color.Green;
+                    this.labelResult.Text = "Right\nAnswer";
+                    this.labelResult.ForeColor = Color.Green;
                }
                else
                {
-                    this.textBoxResult.Text = "Wrong\nAnswer";
-                    this.textBoxResult.ForeColor = Color.Red;
+                    this.labelResult.Text = "Wrong\nAnswer";
+                    this.labelResult.ForeColor = Color.Red;
                }
 
-               this.textBoxResult.Show();
+               this.labelResult.Show();
           }
 
           private void buttonGetExplanation_Click(object sender, EventArgs e)
           {
                this.buttonGetExplanation.Enabled = false;
-               this.textBoxExplanation.Text = question.Explanation;
+               this.labelExplanation.Text = question.Explanation;
           }
      }
 }

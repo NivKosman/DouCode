@@ -81,6 +81,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Exceptions\CannotAddQuestionToDBException.cs" />
+    <Compile Include="DouCodeDB.cs" />
     <Compile Include="GameActionForm.cs">
       <SubType>Form</SubType>
     </Compile>

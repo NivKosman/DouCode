@@ -16,12 +16,12 @@ namespace DouCode
         private static GameEngine s_Instance = null;
         private static readonly Object sr_Lock = new object();
 
-        private readonly HashSet<Question> r_Questions = new HashSet<Question>();
+        private readonly DouCodeDB DB = new DouCodeDB();
 
         private GameEngine(string i_UserName)
         {
             m_Player = new Player(i_UserName);
-           // r_Questions = LoadQuestions();
+           LoadQuestions();
         }
 
 
@@ -56,25 +56,12 @@ namespace DouCode
 
         public Question GetQuestion()
         {
-               String[] questArray = { "Printing in python"
-                    , "In c++you would use \"cout <<\". in python you would use?"
-                    , "print","cout", "printf", "writeline"
-                    ,"in phyton you use the function print in order to printing to the screen" };
-               Question question = new Question(questArray);
-                    
-            return question;
-
+            return DB.GetQuestion();
         }
 
-        public HashSet<Question> GetAllQuestions()
-        {
-            return r_Questions;
-        }
 
-        private HashSet<Question> LoadQuestions()
+        private void LoadQuestions()
         {
-            HashSet<Question> questions = new HashSet<Question>();
-
             String questionsString = File.ReadAllText(@"D:\Studies\Workshop\DouCode\questionDB.db");
             String[] questionDelim = { "\n$$$" };
             String[] allQuestions = questionsString.Split(questionDelim, StringSplitOptions.RemoveEmptyEntries);
@@ -90,9 +77,8 @@ namespace DouCode
                     questionList.Add(questionPart);
                 }
                 String[] questionArr = questionList.ToArray();
-                questions.Add(new Question(questionArr));
+                DB.AddQuestion(new Question(questionArr));
             }
-            return questions; 
         }
     }
 }

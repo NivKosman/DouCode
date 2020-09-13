@@ -24,7 +24,6 @@ namespace DouCode
            LoadQuestions();
         }
 
-
         public static GameEngine Instance(string i_UserName)
         {
             if (s_Instance == null)
@@ -62,7 +61,7 @@ namespace DouCode
 
         private void LoadQuestions()
         {
-            String questionsString = File.ReadAllText(@"D:\Studies\Workshop\DouCode\questionDB.db");
+            String questionsString = File.ReadAllText(@"C:\Dou-Code\DouCode\DouCode\questionDB.db");
             String[] questionDelim = { "\n$$$" };
             String[] allQuestions = questionsString.Split(questionDelim, StringSplitOptions.RemoveEmptyEntries);
 

@@ -31,15 +31,15 @@
                this.NamePlayerLabel = new System.Windows.Forms.Label();
                this.BackButton = new System.Windows.Forms.Button();
                this.panelGame = new System.Windows.Forms.Panel();
+               this.labelExplanation = new System.Windows.Forms.Label();
+               this.labelQuestion = new System.Windows.Forms.Label();
+               this.labelTitleQuestion = new System.Windows.Forms.Label();
                this.buttonAnswer3 = new System.Windows.Forms.Button();
                this.buttonAnswer2 = new System.Windows.Forms.Button();
                this.buttonAnswer1 = new System.Windows.Forms.Button();
                this.buttonAnswer0 = new System.Windows.Forms.Button();
                this.buttonNewQuestion = new System.Windows.Forms.Button();
                this.buttonGetExplanation = new System.Windows.Forms.Button();
-               this.labelTitleQuestion = new System.Windows.Forms.Label();
-               this.labelQuestion = new System.Windows.Forms.Label();
-               this.labelExplanation = new System.Windows.Forms.Label();
                this.labelResult = new System.Windows.Forms.Label();
                this.panelGame.SuspendLayout();
                this.SuspendLayout();
@@ -48,7 +48,7 @@
                // 
                this.NamePlayerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                this.NamePlayerLabel.ForeColor = System.Drawing.SystemColors.Highlight;
-               this.NamePlayerLabel.Location = new System.Drawing.Point(18, 10);
+               this.NamePlayerLabel.Location = new System.Drawing.Point(21, 9);
                this.NamePlayerLabel.Name = "NamePlayerLabel";
                this.NamePlayerLabel.Size = new System.Drawing.Size(458, 35);
                this.NamePlayerLabel.TabIndex = 0;
@@ -57,7 +57,7 @@
                // BackButton
                // 
                this.BackButton.ForeColor = System.Drawing.SystemColors.HotTrack;
-               this.BackButton.Location = new System.Drawing.Point(21, 315);
+               this.BackButton.Location = new System.Drawing.Point(24, 333);
                this.BackButton.Name = "BackButton";
                this.BackButton.Size = new System.Drawing.Size(75, 26);
                this.BackButton.TabIndex = 1;
@@ -67,21 +67,50 @@
                // 
                // panelGame
                // 
+               this.panelGame.Controls.Add(this.labelResult);
                this.panelGame.Controls.Add(this.labelExplanation);
+               this.panelGame.Controls.Add(this.buttonGetExplanation);
                this.panelGame.Controls.Add(this.labelQuestion);
                this.panelGame.Controls.Add(this.labelTitleQuestion);
                this.panelGame.Controls.Add(this.buttonAnswer3);
                this.panelGame.Controls.Add(this.buttonAnswer2);
                this.panelGame.Controls.Add(this.buttonAnswer1);
                this.panelGame.Controls.Add(this.buttonAnswer0);
-               this.panelGame.Location = new System.Drawing.Point(24, 58);
+               this.panelGame.Location = new System.Drawing.Point(24, 47);
                this.panelGame.Name = "panelGame";
-               this.panelGame.Size = new System.Drawing.Size(490, 251);
+               this.panelGame.Size = new System.Drawing.Size(628, 280);
                this.panelGame.TabIndex = 2;
+               // 
+               // labelExplanation
+               // 
+               this.labelExplanation.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+               this.labelExplanation.Location = new System.Drawing.Point(3, 190);
+               this.labelExplanation.Name = "labelExplanation";
+               this.labelExplanation.Size = new System.Drawing.Size(487, 79);
+               this.labelExplanation.TabIndex = 7;
+               this.labelExplanation.Text = "labelExplanation";
+               // 
+               // labelQuestion
+               // 
+               this.labelQuestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+               this.labelQuestion.Location = new System.Drawing.Point(6, 29);
+               this.labelQuestion.Name = "labelQuestion";
+               this.labelQuestion.Size = new System.Drawing.Size(477, 45);
+               this.labelQuestion.TabIndex = 6;
+               this.labelQuestion.Text = "labelQuestion";
+               // 
+               // labelTitleQuestion
+               // 
+               this.labelTitleQuestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+               this.labelTitleQuestion.Location = new System.Drawing.Point(3, 4);
+               this.labelTitleQuestion.Name = "labelTitleQuestion";
+               this.labelTitleQuestion.Size = new System.Drawing.Size(480, 25);
+               this.labelTitleQuestion.TabIndex = 5;
+               this.labelTitleQuestion.Text = "labelTitle";
                // 
                // buttonAnswer3
                // 
-               this.buttonAnswer3.Location = new System.Drawing.Point(3, 151);
+               this.buttonAnswer3.Location = new System.Drawing.Point(0, 164);
                this.buttonAnswer3.Name = "buttonAnswer3";
                this.buttonAnswer3.Size = new System.Drawing.Size(480, 23);
                this.buttonAnswer3.TabIndex = 4;
@@ -91,7 +120,7 @@
                // 
                // buttonAnswer2
                // 
-               this.buttonAnswer2.Location = new System.Drawing.Point(3, 122);
+               this.buttonAnswer2.Location = new System.Drawing.Point(0, 135);
                this.buttonAnswer2.Name = "buttonAnswer2";
                this.buttonAnswer2.Size = new System.Drawing.Size(480, 23);
                this.buttonAnswer2.TabIndex = 3;
@@ -101,7 +130,7 @@
                // 
                // buttonAnswer1
                // 
-               this.buttonAnswer1.Location = new System.Drawing.Point(3, 93);
+               this.buttonAnswer1.Location = new System.Drawing.Point(0, 106);
                this.buttonAnswer1.Name = "buttonAnswer1";
                this.buttonAnswer1.Size = new System.Drawing.Size(480, 23);
                this.buttonAnswer1.TabIndex = 2;
@@ -111,7 +140,7 @@
                // 
                // buttonAnswer0
                // 
-               this.buttonAnswer0.Location = new System.Drawing.Point(3, 64);
+               this.buttonAnswer0.Location = new System.Drawing.Point(0, 77);
                this.buttonAnswer0.Name = "buttonAnswer0";
                this.buttonAnswer0.Size = new System.Drawing.Size(480, 23);
                this.buttonAnswer0.TabIndex = 1;
@@ -122,7 +151,7 @@
                // buttonNewQuestion
                // 
                this.buttonNewQuestion.ForeColor = System.Drawing.SystemColors.HotTrack;
-               this.buttonNewQuestion.Location = new System.Drawing.Point(367, 315);
+               this.buttonNewQuestion.Location = new System.Drawing.Point(395, 333);
                this.buttonNewQuestion.Name = "buttonNewQuestion";
                this.buttonNewQuestion.Size = new System.Drawing.Size(119, 26);
                this.buttonNewQuestion.TabIndex = 3;
@@ -134,7 +163,7 @@
                // 
                this.buttonGetExplanation.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                this.buttonGetExplanation.ForeColor = System.Drawing.SystemColors.HotTrack;
-               this.buttonGetExplanation.Location = new System.Drawing.Point(539, 248);
+               this.buttonGetExplanation.Location = new System.Drawing.Point(515, 200);
                this.buttonGetExplanation.Name = "buttonGetExplanation";
                this.buttonGetExplanation.Size = new System.Drawing.Size(89, 50);
                this.buttonGetExplanation.TabIndex = 5;
@@ -142,37 +171,10 @@
                this.buttonGetExplanation.UseVisualStyleBackColor = true;
                this.buttonGetExplanation.Click += new System.EventHandler(this.buttonGetExplanation_Click);
                // 
-               // labelTitleQuestion
-               // 
-               this.labelTitleQuestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-               this.labelTitleQuestion.Location = new System.Drawing.Point(3, 4);
-               this.labelTitleQuestion.Name = "labelTitleQuestion";
-               this.labelTitleQuestion.Size = new System.Drawing.Size(480, 25);
-               this.labelTitleQuestion.TabIndex = 5;
-               this.labelTitleQuestion.Text = "labelTitle";
-               // 
-               // labelQuestion
-               // 
-               this.labelQuestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-               this.labelQuestion.Location = new System.Drawing.Point(6, 29);
-               this.labelQuestion.Name = "labelQuestion";
-               this.labelQuestion.Size = new System.Drawing.Size(477, 32);
-               this.labelQuestion.TabIndex = 6;
-               this.labelQuestion.Text = "labelQuestion";
-               // 
-               // labelExplanation
-               // 
-               this.labelExplanation.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-               this.labelExplanation.Location = new System.Drawing.Point(9, 190);
-               this.labelExplanation.Name = "labelExplanation";
-               this.labelExplanation.Size = new System.Drawing.Size(474, 50);
-               this.labelExplanation.TabIndex = 7;
-               this.labelExplanation.Text = "labelExplanation";
-               // 
                // labelResult
                // 
                this.labelResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-               this.labelResult.Location = new System.Drawing.Point(535, 156);
+               this.labelResult.Location = new System.Drawing.Point(504, 82);
                this.labelResult.Name = "labelResult";
                this.labelResult.Size = new System.Drawing.Size(100, 76);
                this.labelResult.TabIndex = 6;
@@ -183,8 +185,6 @@
                this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
                this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
                this.ClientSize = new System.Drawing.Size(675, 371);
-               this.Controls.Add(this.labelResult);
-               this.Controls.Add(this.buttonGetExplanation);
                this.Controls.Add(this.buttonNewQuestion);
                this.Controls.Add(this.panelGame);
                this.Controls.Add(this.BackButton);

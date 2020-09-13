@@ -17,9 +17,11 @@ namespace DouCode
           private int rightAnswer;
           private string[] answers;
           private Question question;
+          private int amountOfRightAnswers;
 
           public GameActionForm()
           {
+               amountOfRightAnswers = 0;
                InitializeComponent();
                this.NamePlayerLabel.Text = "Hello " +GameEngine.Instance().m_Player.Name + " Welcome to our game";
                newQuestion();
@@ -39,6 +41,20 @@ namespace DouCode
                this.Close();
           }
 
+          private void ShowFinalResult()
+          {
+               this.buttonNewQuestion.Hide();
+               this.BackButton.Hide();
+               foreach(Control control in this.panelGame.Controls)
+               {
+                    control.Hide();
+               }
+
+               this.labelExplanation.Text = "You got " + amountOfRightAnswers + " right answers\n"
+                    + "Thank you for your participation";
+               this.labelExplanation.Show();
+          }
+
           private void newQuestion()
           {
                this.labelExplanation.Text = "";
@@ -50,6 +66,13 @@ namespace DouCode
                this.labelResult.Hide();
 
                this.question = GameEngine.Instance().GetQuestion();
+
+               if (this.question == null)
+               { 
+                    ShowFinalResult();
+                    return;
+               }
+                    
                int j = 0;
                this.rightAnswer = new Random().Next(0, 3);
               
@@ -87,6 +110,7 @@ namespace DouCode
 
                if(rightAnswer==0)
                {
+                    amountOfRightAnswers++;
                     this.labelResult.Text = "Right\nAnswer";
                     this.labelResult.ForeColor = Color.Green;
                }
@@ -105,6 +129,7 @@ namespace DouCode
 
                if (rightAnswer == 1)
                {
+                    amountOfRightAnswers++;
                     this.labelResult.Text = "Right\nAnswer";
                     this.labelResult.ForeColor = Color.Green;
                }
@@ -123,6 +148,7 @@ namespace DouCode
 
                if (rightAnswer == 2)
                {
+                    amountOfRightAnswers++;
                     this.labelResult.Text = "Right\nAnswer";
                     this.labelResult.ForeColor = Color.Green;
                }
@@ -141,6 +167,7 @@ namespace DouCode
 
                if (rightAnswer == 3)
                {
+                    amountOfRightAnswers++;
                     this.labelResult.Text = "Right\nAnswer";
                     this.labelResult.ForeColor = Color.Green;
                }

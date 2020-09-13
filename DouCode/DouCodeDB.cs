@@ -25,6 +25,10 @@ namespace DouCode
         public Question GetQuestion()
         {
             Random rand = new Random();
+
+            if (m_QuestionsDB.Count == 0)
+                return null;
+
             int questionIndex = rand.Next(m_QuestionsDB.Count - 1);
             Question question = m_QuestionsDB[questionIndex];
             m_QuestionsDB[questionIndex] = m_QuestionsDB[m_QuestionsDB.Count - 1];

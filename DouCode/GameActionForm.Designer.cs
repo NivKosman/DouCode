@@ -31,7 +31,9 @@
                this.NamePlayerLabel = new System.Windows.Forms.Label();
                this.BackButton = new System.Windows.Forms.Button();
                this.panelGame = new System.Windows.Forms.Panel();
+               this.labelResult = new System.Windows.Forms.Label();
                this.labelExplanation = new System.Windows.Forms.Label();
+               this.buttonGetExplanation = new System.Windows.Forms.Button();
                this.labelQuestion = new System.Windows.Forms.Label();
                this.labelTitleQuestion = new System.Windows.Forms.Label();
                this.buttonAnswer3 = new System.Windows.Forms.Button();
@@ -39,8 +41,7 @@
                this.buttonAnswer1 = new System.Windows.Forms.Button();
                this.buttonAnswer0 = new System.Windows.Forms.Button();
                this.buttonNewQuestion = new System.Windows.Forms.Button();
-               this.buttonGetExplanation = new System.Windows.Forms.Button();
-               this.labelResult = new System.Windows.Forms.Label();
+               this.buttonTryForYourself = new System.Windows.Forms.Button();
                this.panelGame.SuspendLayout();
                this.SuspendLayout();
                // 
@@ -67,6 +68,7 @@
                // 
                // panelGame
                // 
+               this.panelGame.Controls.Add(this.buttonTryForYourself);
                this.panelGame.Controls.Add(this.labelResult);
                this.panelGame.Controls.Add(this.labelExplanation);
                this.panelGame.Controls.Add(this.buttonGetExplanation);
@@ -81,6 +83,15 @@
                this.panelGame.Size = new System.Drawing.Size(628, 280);
                this.panelGame.TabIndex = 2;
                // 
+               // labelResult
+               // 
+               this.labelResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+               this.labelResult.Location = new System.Drawing.Point(504, 82);
+               this.labelResult.Name = "labelResult";
+               this.labelResult.Size = new System.Drawing.Size(100, 76);
+               this.labelResult.TabIndex = 6;
+               this.labelResult.Text = "labelResult";
+               // 
                // labelExplanation
                // 
                this.labelExplanation.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -89,6 +100,18 @@
                this.labelExplanation.Size = new System.Drawing.Size(487, 79);
                this.labelExplanation.TabIndex = 7;
                this.labelExplanation.Text = "labelExplanation";
+               // 
+               // buttonGetExplanation
+               // 
+               this.buttonGetExplanation.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+               this.buttonGetExplanation.ForeColor = System.Drawing.SystemColors.HotTrack;
+               this.buttonGetExplanation.Location = new System.Drawing.Point(515, 200);
+               this.buttonGetExplanation.Name = "buttonGetExplanation";
+               this.buttonGetExplanation.Size = new System.Drawing.Size(89, 50);
+               this.buttonGetExplanation.TabIndex = 5;
+               this.buttonGetExplanation.Text = "get explanation";
+               this.buttonGetExplanation.UseVisualStyleBackColor = true;
+               this.buttonGetExplanation.Click += new System.EventHandler(this.buttonGetExplanation_Click);
                // 
                // labelQuestion
                // 
@@ -159,26 +182,17 @@
                this.buttonNewQuestion.UseVisualStyleBackColor = true;
                this.buttonNewQuestion.Click += new System.EventHandler(this.buttonNewQuestion_Click);
                // 
-               // buttonGetExplanation
+               // buttonTryForYourself
                // 
-               this.buttonGetExplanation.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-               this.buttonGetExplanation.ForeColor = System.Drawing.SystemColors.HotTrack;
-               this.buttonGetExplanation.Location = new System.Drawing.Point(515, 200);
-               this.buttonGetExplanation.Name = "buttonGetExplanation";
-               this.buttonGetExplanation.Size = new System.Drawing.Size(89, 50);
-               this.buttonGetExplanation.TabIndex = 5;
-               this.buttonGetExplanation.Text = "get explanation";
-               this.buttonGetExplanation.UseVisualStyleBackColor = true;
-               this.buttonGetExplanation.Click += new System.EventHandler(this.buttonGetExplanation_Click);
-               // 
-               // labelResult
-               // 
-               this.labelResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-               this.labelResult.Location = new System.Drawing.Point(504, 82);
-               this.labelResult.Name = "labelResult";
-               this.labelResult.Size = new System.Drawing.Size(100, 76);
-               this.labelResult.TabIndex = 6;
-               this.labelResult.Text = "labelResult";
+               this.buttonTryForYourself.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+               this.buttonTryForYourself.ForeColor = System.Drawing.SystemColors.HotTrack;
+               this.buttonTryForYourself.Location = new System.Drawing.Point(489, 4);
+               this.buttonTryForYourself.Name = "buttonTryForYourself";
+               this.buttonTryForYourself.Size = new System.Drawing.Size(136, 56);
+               this.buttonTryForYourself.TabIndex = 8;
+               this.buttonTryForYourself.Text = "try for yourself";
+               this.buttonTryForYourself.UseVisualStyleBackColor = true;
+               this.buttonTryForYourself.Click += new System.EventHandler(this.buttonTryForYourself_Click);
                // 
                // GameActionForm
                // 
@@ -212,5 +226,6 @@
           private System.Windows.Forms.Label labelQuestion;
           private System.Windows.Forms.Label labelTitleQuestion;
           private System.Windows.Forms.Label labelResult;
+          private System.Windows.Forms.Button buttonTryForYourself;
      }
 }

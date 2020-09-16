@@ -185,5 +185,13 @@ namespace DouCode
                this.buttonGetExplanation.Enabled = false;
                this.labelExplanation.Text = question.Explanation;
           }
+
+          private void buttonTryForYourself_Click(object sender, EventArgs e)
+          {
+               this.Hide();
+               PyhtonModuleForm pythonMouduleForm = new PyhtonModuleForm();
+               pythonMouduleForm.ShowDialog();
+               this.Close();
+          }
      }
 }

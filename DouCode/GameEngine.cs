@@ -61,7 +61,7 @@ namespace DouCode
 
         private void LoadQuestions()
         {
-            String questionsString = File.ReadAllText(@"C:\Dou-Code\DouCode\DouCode\questionDB.db");
+            String questionsString = File.ReadAllText(@"questionDB.db");
             String[] questionDelim = { "\n$$$" };
             String[] allQuestions = questionsString.Split(questionDelim, StringSplitOptions.RemoveEmptyEntries);
 

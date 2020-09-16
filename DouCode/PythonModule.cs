@@ -25,7 +25,7 @@ namespace DouCode
             source.Execute(scope);
             var douCodeMain = scope.GetVariable("DouCode");
             var douCodeInstance = engine.Operations.CreateInstance(douCodeMain);
-            String result = douCodeInstance.douCodeMain();
+             String result = douCodeInstance.douCodeMain();
             return result;
         }
 
